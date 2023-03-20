@@ -1,12 +1,106 @@
+.contenedorPrincipal {
+    width:100%;
+    height: calc(100vh - 100px);
+    color: black;
+    display:flex;
+    justify-content: start;
+    align-items: center;
+flex-direction: column;
+margin-top: 100px;
 
-/* 
+}
+h1{
+    font-size: 6em;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 10%;
+ 
+}
+.contenedorFormulario {
+    width: 50%;
+    background-color: black ;
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 10px;
+    
+}
+.contenedorTareas {
+    width: 50%;
+    background-color: turquoise;
+   /*padding: 10px; */
+    margin-top: 5px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 10px 0px 0px  rgba(0,0,0,0.75);
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+}
+.input{
+    line-height: 30px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
 
-*/
+}
+.btn{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 0 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    transition: all 0.5;
+    margin-right: 10px;
+}
+.btn:hover {
+    background-color: white;
+    transform: scale(1.1);
+
+}
+.btnEditar{
+    background-color: turquoise;
+    color: white;
+    margin-right: 10px;
+}
+.btnEditar:Hover{
+    background-color: black;
+    transform: scale(1.1);
+}
+.btnBorrar {
+    background-color: black;
+    color: white;
+
+}
+.btnBorrar:hover{
+    background-color: black;
+    transform: scale(1.1);}
+
+    .contenedorInfoTareas{
+        width: 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+.contenedorTarea{
+    width: 400%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(255,255,255,0.3);
+}
+.todoTarea{
+    margin-right: 50px;
+}
+.spanSubrayado {
+    text-decoration: line-through;
+   
+}
