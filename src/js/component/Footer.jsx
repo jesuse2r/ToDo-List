@@ -1,12 +1,14 @@
 import React from "react";
 
 const Footer = (props) => {
+  const tareas= props.tareas.filter(tarea=>tarea.done==false)
+  console.log(tareas)
 
 
   return (
 
     <div className="mt-3">
-      {props.tareas.length} {props.tareas.length !== 1 ? "tareas" : "tarea"}
+      {tareas.length} {tareas.length !== 1 ? "tareas" : "tarea"}
 
 
     </div>

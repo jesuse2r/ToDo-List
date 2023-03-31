@@ -12,16 +12,19 @@ const Formulario = (props) => {
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
+                name="label"
 
 
 
                 placeholder="Write" onChange={handleChange}
-                value={tarea} />
+                value={tarea.label} />
 
             <input
-                type="submit"
+               name="label"
+               type="submit"
                 className="btn m-3"
                 value="Add"
+                
                 onClick={handleSubmit}
             />
 

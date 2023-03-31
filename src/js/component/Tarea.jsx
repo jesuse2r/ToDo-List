@@ -3,14 +3,15 @@ import App from "./App.jsx"
 
 
 const Tarea = (props) => {
-    const { tarea, OnActualizarTarea, onBorrarTarea } = props
+    const { tarea, OnActualizarTarea, onBorrarTarea, id } = props
     const [editando, setEditando] = useState(false)
     const [estaCompletada, setEstaCompletada] = useState(false)
 
     function ModoEdicionActivado() {
         const [valor, setValor] = useState(tarea.tarea)
+        
         function handleChange(e) {
-            const text = e.taget.value
+            const text = e.target.name
             setValor(text)
         }
         function handleClick(e) {
@@ -31,12 +32,13 @@ const Tarea = (props) => {
             <>
                 <input
                     type='text'
+                    name="label"
                     onChange={handleChange}
-                    value={valor} />
+                    value={tarea.label} />
                 <button
                     className="btn" onClick={handleClick}>Save</button>
                 <button
-                    className="btn btnBorrar" onClick={() => onBorrarTarea(tarea.id)}>Delete</button>
+                    className="btn btnBorrar" onClick={() => onBorrarTarea(tarea.label)}>Delete</button>
             </>
         );
     };
@@ -46,7 +48,7 @@ const Tarea = (props) => {
                 <span
                     className={estaCompletada ? "todoTarea spanSubrayado" : "todoTarea"}
                     onClick={() => setEstaCompletada(!estaCompletada)}>
-                    {tarea.tarea}
+                    {tarea.label}
                 </span>
 
                 <button
@@ -55,7 +57,7 @@ const Tarea = (props) => {
                     Refresh
                 </button>
                 <button
-                    className="btn btnBorrar" onClick={() => onBorrarTarea(tarea.id)}>Delete</button>
+                    className="btn btnBorrar" onClick={() => onBorrarTarea(id)}>Delete</button>
             </>
 
         );
